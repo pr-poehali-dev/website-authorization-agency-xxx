@@ -1,4 +1,9 @@
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 
 const VideoPage = () => {
   return (
@@ -40,6 +45,13 @@ const VideoPage = () => {
               <p>📱 Наведите камеру телефона на QR-код</p>
               <p>🎥 Видео откроется автоматически</p>
             </div>
+          </CardContent>
+        </Card>
+
+        {/* Кнопка "Нашел код" */}
+        <Card className="bg-white/95 backdrop-blur-sm shadow-2xl border-0 mb-6">
+          <CardContent className="pt-6">
+            <PasswordForm />
           </CardContent>
         </Card>
 
