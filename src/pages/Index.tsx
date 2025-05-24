@@ -10,8 +10,12 @@ const Index = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Логика авторизации будет добавлена позже
-    console.log("Авторизация:", { login, password });
+    // Проверка авторизации
+    if (login === "ALEX" && password === "12390") {
+      window.location.href = "/video";
+    } else {
+      alert("Неверный логин или пароль!");
+    }
   };
 
   return (
